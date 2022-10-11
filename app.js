@@ -16,7 +16,6 @@ app.get('/', function (req, res) {
 });
 
 app.get('/detail', function (req, res) {
-    res.send("holaaaa")
     res.render('detail', req.query);
 });
 app.post('/pago', function (req, res) {
