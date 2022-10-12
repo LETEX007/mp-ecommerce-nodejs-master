@@ -7,6 +7,9 @@ var app = express();
 app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 app.use(express.static('assets'));
  
 app.use('/assets', express.static(__dirname + '/assets'));
