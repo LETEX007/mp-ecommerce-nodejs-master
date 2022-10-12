@@ -55,9 +55,9 @@ app.post("/create_preference", (req, res) => {
 			}
 		],
 		back_urls: {
-			"success": "http://localhost:8080/notificacion",
-			"failure": "http://localhost:8080/notificacion",
-			"pending": "http://localhost:8080/notificacion"
+			"success": "http://letex007-mp-ecommerce-nodejs.herokuapp.com/notificacion",
+			"failure": "http://letex007-mp-ecommerce-nodejs.herokuapp.com/notificacion",
+			"pending": "http://letex007-mp-ecommerce-nodejs.herokuapp.com/notificacion"
 		},
 		auto_return: "approved",
 		payment_methods: {
@@ -68,7 +68,7 @@ app.post("/create_preference", (req, res) => {
 			],
 			installments: 6
 		},
-		notification_url: "https://localhost:8080/notificacion",
+		notification_url: "https://letex007-mp-ecommerce-nodejs.herokuapp.com/notificacion",
 		external_reference: "rorolete02@gmail.com",
 	};
 
@@ -85,7 +85,9 @@ app.get('/notificacion', function(req, res) {
 	res.json({
 		Payment: req.query.payment_id,
 		Status: req.query.status,
-		MerchantOrder: req.query.merchant_order_id
+		MerchantOrder: req.query.merchant_order_id,
+		PaymentMethod: req.query.payment_method_id,
+		external_reference: req.query.external_reference
 	});
 });
 
