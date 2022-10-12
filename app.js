@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use(express.static('assets'));
  
-app.use('/assets', express.static(__dirname + '/assets'));
+// app.use('/assets', express.static(__dirname + '/assets'));
 const mercadopago = require("mercadopago");
 
 // REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel
