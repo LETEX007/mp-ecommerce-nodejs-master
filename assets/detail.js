@@ -16,7 +16,7 @@ const mercadopago = new MercadoPago('APP_USR-ff96fe80-6866-4888-847e-c69250754d3
         picture_url: document.getElementById("img").value
     };
       
-    fetch("https://letex007-mp-ecommerce-nodejs.herokuapp.com/create_preference", {
+    fetch("/create_preference", {
       method: "POST",
       headers: {
           "Content-Type": "application/json",

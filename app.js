@@ -81,7 +81,7 @@ app.post("/create_preference", (req, res) => {
 			console.log(error);
 		});
 });
-app.get('/notificacion', function(req, res) {
+app.post('/notificacion', function(req, res) {
 	res.json({
 		Payment: req.query.payment_id,
 		Status: req.query.status,
