@@ -84,12 +84,12 @@ app.post("/create_preference", (req, res) => {
 			console.log(error);
 		});
 });
-app.post('/notificacion', function(req, res) {
+app.get('/notificacion', function(req, res) {
 	res.json({
 		Payment: req.query.payment_id,
 		Status: req.query.status,
 		MerchantOrder: req.query.merchant_order_id,
-		PaymentMethod: req.query.payment_method_id,
+		PaymentMethod: req.query.payment_type,
 		external_reference: req.query.external_reference
 	});
 });
