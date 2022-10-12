@@ -95,6 +95,7 @@ app.get('/failure', function(req, res) {
 });
 
 app.post('/notificacion', function(req, res) {
+	console.log(req.body);
 	res.status(200).send('OK');
 });
 
