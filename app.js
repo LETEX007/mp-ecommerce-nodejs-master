@@ -98,5 +98,8 @@ app.post('/notificacion', function(req, res) {
 	console.log(req.body);
 	res.status(200).send('OK');
 });
-
+app.get('/notificacion', function(req, res) {
+	console.log(req.body);
+	res.status(200).send('OK');
+});
 app.listen(port);
