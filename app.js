@@ -55,9 +55,9 @@ app.post("/create_preference", (req, res) => {
 			}
 		],
 		back_urls: {
-			"success": "http://letex007-mp-ecommerce-nodejs.herokuapp.com/notificacion",
-			"failure": "http://letex007-mp-ecommerce-nodejs.herokuapp.com/notificacion",
-			"pending": "http://letex007-mp-ecommerce-nodejs.herokuapp.com/notificacion"
+			"success": "https://letex007-mp-ecommerce-nodejs.herokuapp.com/notificacion",
+			"failure": "https://letex007-mp-ecommerce-nodejs.herokuapp.com/notificacion",
+			"pending": "https://letex007-mp-ecommerce-nodejs.herokuapp.com/notificacion"
 		},
 		auto_return: "approved",
 		payment_methods: {
