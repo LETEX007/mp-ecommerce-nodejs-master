@@ -100,6 +100,6 @@ app.post('/notificacion', function(req, res) {
 });
 app.get('/notificacion', function(req, res) {
 	console.log(req.body);
-	res.render('home', req.query);
+	res.render('home');
 });
 app.listen(port);
