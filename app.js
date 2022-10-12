@@ -84,14 +84,18 @@ app.post("/create_preference", (req, res) => {
 			console.log(error);
 		});
 });
+app.get('/success', function(req, res) {
+	res.render('success', req.query);
+});
+app.get('/pending', function(req, res) {
+	res.render('pending', req.query);
+});
+app.get('/failure', function(req, res) {
+	res.render('failure', req.query);
+});
+
 app.post('/notificacion', function(req, res) {
-	res.json({
-		Payment: req.query.payment_id,
-		Status: req.query.status,
-		MerchantOrder: req.query.merchant_order_id,
-		PaymentMethod: req.query.payment_type,
-		external_reference: req.query.external_reference
-	});
+	res.status(200).send('OK');
 });
 
 app.listen(port);
