@@ -21,7 +21,13 @@ mercadopago.configure({
 	
 	integrator_id: 'dev_24c65fb163bf11ea96500242ac130004',
 });
-
+const HEADER = {
+  headers: { Accept: 'application/json',
+  'Access-Control-Allow-Origin': '*',},
+}
+app.get('/login', function (req, res) {
+    console.log(req.query);
+});
 app.get('/', function (req, res) {
     res.render('home');
 });
