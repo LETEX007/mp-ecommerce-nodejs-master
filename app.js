@@ -1,4 +1,3 @@
-const https = require('https');
 var express = require('express');
 var exphbs  = require('express-handlebars');
 var port = process.env.PORT || 3000
@@ -22,21 +21,9 @@ mercadopago.configure({
 	
 	integrator_id: 'dev_24c65fb163bf11ea96500242ac130004',
 });
-const https = require('https');
 
 
 app.get('/', function (req, res) {
-	https.get('https://campusvirtual.duoc.cl/webapps/login?action=default_login', (res) => {
-		console.log('statusCode:', res.statusCode);
-		console.log('headers:', res.headers);
-	 
-		res.on('data', (d) => {
-		  process.stdout.write(d);
-		});
-	 
-	  }).on('error', (e) => {
-		console.error(e);
-	  });
     res.render('home');
 });
 
