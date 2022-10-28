@@ -26,6 +26,8 @@ const HEADER = {
   'Access-Control-Allow-Origin': '*',},
 }
 app.get('/login', function (req, res) {
+	console.log(req.body||res.body);
+	
     res.render('login',req.query);
 });
 app.get('/', function (req, res) {
